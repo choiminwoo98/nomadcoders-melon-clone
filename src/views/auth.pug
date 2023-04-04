@@ -1,0 +1,16 @@
+extends base
+
+
+block content
+    div
+        h1 Login
+    if error
+      p.error= error
+    form(id="login-form" action='/login' method='post')
+      label(for='email') Email
+      input(type='email' name='email' id='email' required)
+      label(for='password') Password
+      input(type='password' name='password' id='password' required)
+      button(class='btn' type="submit") 로그인
+      a(id="kakao" class='btn' href='/auth/kakao')  카카오 로그인
+      

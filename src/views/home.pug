@@ -2,3 +2,17 @@ extends base
 
 block content
     div
+        h home
+        if(user)
+         p #{user.displayName}님 안녕하세요~
+        else 
+         p 안녕하세요~
+        if(user)
+         a(class='btn' href='/auth/logout')  로그아웃
+        else
+         a(class='btn' href='/auth')  로그인
+        p #{songName}
+       
+
+    div 
+        
